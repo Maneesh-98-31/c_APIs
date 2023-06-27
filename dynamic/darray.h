@@ -12,5 +12,6 @@ typedef struct dynamic_array{
     int size;
 }darray;
 darray * make_darray(int size);
-BOOL add(darray*,void*,int);
+BOOL add(darray**,void*,int);
+BOOL resize(darray**);
 #endif //UNTITLED_DARRAY_H
