@@ -14,17 +14,17 @@ darray* make_darray(darray **arr){
     (*arr)->MAX = 10;
 }
 
-BOOL add(darray **arr,void* item,int size){
+BOOL add(darray **arr,void* item,int i_size){
     //printf("%d\n",*(int*)item);
     if((*arr)->size<(*arr)->MAX){
-        (*arr)->element[(*arr)->size] = (void*) malloc(size);
-        memcpy((*arr)->element[(*arr)->size++],item,size);
+        (*arr)->element[(*arr)->size] = (void*) malloc(i_size);
+        memcpy((*arr)->element[(*arr)->size++],item,i_size);
         return TRUE;
     }else if((*arr)->MAX*(*arr)->size<MAX_SIZE){
         (*arr)->element = (void*) realloc((*arr)->element,(*arr)->size*(*arr)->MAX);
         (*arr)->MAX = (*arr)->size*(*arr)->MAX;
-        (*arr)->element[(*arr)->size] = (void*) malloc(size);
-        memcpy((*arr)->element[(*arr)->size++],item,size);
+        (*arr)->element[(*arr)->size] = (void*) malloc(i_size);
+        memcpy((*arr)->element[(*arr)->size++],item,i_size);
     }else printf("\nMemory out of bound\n");
     return FALSE;
 }
@@ -35,9 +35,9 @@ uint32_t size(darray** arr){
 void* get_data(darray** arr,int idx){
     return (*arr)->element[idx];
 }
-BOOL set_data(darray** arr,int idx,void *item){
-    memcpy((*arr)->element[idx],item,sizeof(void));
-    if(memcmp((*arr)->element[idx],item,sizeof(void))==0) return TRUE;
+BOOL set_data(darray** arr,int idx,void *item,int i_size){
+    memcpy((*arr)->element[idx],item,i_size);
+    if(memcmp((*arr)->element[idx],item,i_size)==0) return TRUE;
     printf("Data not set");
     return FALSE;
 }
