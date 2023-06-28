@@ -2,11 +2,12 @@
 #include "dynamic/darray.h"
 int main() {
     printf("Hello, World!\n");
-    darray *arr = make_darray(sizeof(int));
-    for(int i=0;i<25;i++){
-        add(&arr,(void*)i,sizeof(int));
+    darray *arr = NULL;
+    make_darray(&arr);
+    for(int i=0;i<5;i++){
+        add(&arr,&i,sizeof (i));
     }
     printf("\n%d\n",arr->size);
-    for(int i=0;i<25;i++) printf("%d\n",(int*)arr->element[i]);
+    for(int i=0;i<5;i++) printf("%d\n",(int*)arr->element[i]);
     return 0;
 }
