@@ -10,7 +10,8 @@ int main() {
     }
     printf("\n%d\n", size(&arr));
     for(int i=0;i<15;i++) printf("%d\n",*(int*) get_data(&arr,i));
-    set_data(&arr,10,(void*)100, sizeof (int));
+    int rp = 100;
+    set_data(&arr,10,&rp, sizeof (int));
     for(int i=0;i<15;i++) printf("%d\n",*(int*) get_data(&arr,i));
     return 0;
 }

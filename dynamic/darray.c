@@ -36,8 +36,10 @@ void* get_data(darray** arr,int idx){
     return (*arr)->element[idx];
 }
 BOOL set_data(darray** arr,int idx,void *item,int i_size){
-    memcpy((*arr)->element[idx],item,i_size);
-    if(memcmp((*arr)->element[idx],item,i_size)==0) return TRUE;
+    void *tt = (*arr)->element[idx];
+    printf("%d <=> %d",*(int*)tt,*(int*)item);
+    memcpy(tt,item,i_size);
+    if(memcmp(tt,item,i_size)==0) return TRUE;
     printf("Data not set");
     return FALSE;
 }
