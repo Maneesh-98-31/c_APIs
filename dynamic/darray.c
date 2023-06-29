@@ -37,10 +37,20 @@ void* get_data(darray** arr,int idx){
 }
 BOOL set_data(darray** arr,int idx,void *item,int i_size){
     void *tt = (*arr)->element[idx];
-    printf("%d <=> %d",*(int*)tt,*(int*)item);
+    //printf("%d <=> %d",*(int*)tt,*(int*)item);
     memcpy(tt,item,i_size);
     if(memcmp(tt,item,i_size)==0) return TRUE;
     printf("Data not set");
     return FALSE;
+}
+BOOL remove_data(darray** arr,int idx){
+    void* temp = (*arr)->element[idx];
+    for(int i=idx;i<size(arr)-1;i++){
+        (*arr)->element[i] = (*arr)->element[i+1];
+    }
+    free(temp);
+    free((*arr)->element[(*arr)->size]);
+    (*arr)->size--;
+    return TRUE;
 }
 

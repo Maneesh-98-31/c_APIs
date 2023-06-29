@@ -20,4 +20,5 @@ BOOL add(darray**,void*,int);
 uint32_t size(darray **);
 void* get_data(darray**,int);
 BOOL set_data(darray**,int,void *,int);
+BOOL remove_data(darray**,int);
 #endif //UNTITLED_DARRAY_H
