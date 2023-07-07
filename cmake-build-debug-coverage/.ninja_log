@@ -1,12 +1,6 @@
 # ninja log v5
-4	159	7096785816420834	CMakeFiles/untitled.dir/main.c.obj	a7165df661ccf101
-12	171	7096785816530935	CMakeFiles/untitled.dir/dynamic/darray.c.obj	49eb19ad09a57fad
-171	425	7096785819000816	untitled.exe	710fc37632fb6dde
+8	2290	7099036925227169	CMakeFiles/untitled.dir/main.c.obj	778f66fa9105b592
+6	206	7098244047094539	CMakeFiles/untitled.dir/dynamic/darray.c.obj	97056fbafd1fef48
+1916	2176	7098244066713751	untitled.exe	a78a2c88a0dcea77
 0	15	0	clean	2478b79e65b1ad63
-4	126	7096786131706569	CMakeFiles/untitled.dir/main.c.obj	a7165df661ccf101
-126	310	7096786133506574	untitled.exe	710fc37632fb6dde
-4	149	7096787152272336	CMakeFiles/untitled.dir/main.c.obj	a7165df661ccf101
-14	186	7096787152642306	CMakeFiles/untitled.dir/dynamic/darray.c.obj	49eb19ad09a57fad
-186	433	7096787155059204	untitled.exe	710fc37632fb6dde
-4	163	7096787816639485	CMakeFiles/untitled.dir/main.c.obj	a7165df661ccf101
-163	362	7096787818568134	untitled.exe	710fc37632fb6dde
+25	143	7098242746911081	CMakeFiles/untitled.dir/dynamic/hash_set.c.obj	a45abfec2403fc79
